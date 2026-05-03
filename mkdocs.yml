@@ -1,0 +1,66 @@
+site_name: Omics Vault
+site_description: Peter 的多组学方法学 atomic notes
+site_author: Peter
+site_url: https://petemeng.github.io/omics-vault/
+repo_url: https://github.com/petemeng/omics-vault
+repo_name: petemeng/omics-vault
+
+docs_dir: webdocs
+site_dir: site
+
+theme:
+  name: material
+  language: zh
+  font: false
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - footnotes
+  - tables
+  - toc:
+      permalink: true
+  - wikilinks:
+      base_url: /omics-vault/
+      end_url: /
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.superfences
+
+extra_css:
+  - assets/stylesheets/vault.css
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - 首页: README.md
+  - Concepts:
+      - Map of Content: _concepts/00-MOC.md
+      - 计数数据为什么用负二项: _concepts/poisson-vs-negative-binomial.md
+      - GLM 统一框架: _concepts/glm-unified-view.md
+      - Random effect 横向理解: _concepts/mixed-models-everywhere.md
+      - PCA 与 SVD: _concepts/pca-svd-the-same-thing.md
+      - UMAP 与 t-SNE: _concepts/umap-tsne-what-they-preserve.md
+      - 批次效应: _concepts/batch-effects-causes-and-cures.md
+      - 多重检验: _concepts/multiple-testing-frameworks.md
+      - 组分数据陷阱: _concepts/compositional-data-trap.md
+      - Zero inflation: _concepts/zero-inflation-vs-true-zero.md
+      - Bayesian 何时有用: _concepts/bayesian-vs-frequentist-omics.md
+      - Quiz:
+          - 2026-05-W1: _concepts/_quiz/2026-05-W1.md
+  - Meta:
+      - Progress: _meta/progress.md
+      - Task Spec: _meta/this-task.md
